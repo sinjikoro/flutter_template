@@ -1,4 +1,4 @@
-import 'package:flutter_training/models/weather_model.dart';
+import 'package:flutter_training/cores/models/weather_model.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:yumemi_weather/yumemi_weather.dart';
 

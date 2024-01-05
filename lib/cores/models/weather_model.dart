@@ -1,4 +1,4 @@
-import 'package:flutter_training/enums/weather.dart';
+import 'package:flutter_training/cores/enums/weather.dart';
 
 class WeatherModel {
   final String _weather;
