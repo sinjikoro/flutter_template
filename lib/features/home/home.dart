@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_training/cores/mixins/state_mixin.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -8,11 +7,14 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> with StateMixin {
+class _HomeState extends State<Home> {
   @override
-  void ViewLoaded() async {
-    await Future.delayed(const Duration(milliseconds: 500));
-    Navigator.pushReplacementNamed(context, '/weather');
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.endOfFrame.then((_) async {
+      await Future.delayed(const Duration(microseconds: 500));
+      Navigator.pushNamed(context, '/weather');
+    });
   }
 
   @override
