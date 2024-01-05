@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_training/weather/provider/weather_viewmodel.dart';
 import 'package:flutter_training/weather/view/widgets/weather_disp_area.dart';
@@ -24,7 +25,8 @@ class WeatherView extends ConsumerWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    WeatherTextButton(label: 'close', onPressed: null),
+                    WeatherTextButton(
+                        label: 'close', onPressed: () => SystemNavigator.pop()),
                     WeatherTextButton(
                       label: 'reload',
                       onPressed: () => ref
